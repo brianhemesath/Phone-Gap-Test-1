@@ -1,0 +1,47 @@
+/*
+*/
+
+
+body {
+	margin: 0px;
+	padding: 0px;
+	background-color: #E4F8F9;
+	font-size: 14px;
+	line-height: 23px;
+	font-family: 'Open Sans', 'Arial', serif, sans-serif;
+	letter-spacing: 0;
+	color: #0C121E;
+	height: 100%
+}
+
+
+/*
+Content Elements
+*/
+
+.float_left {
+	float: left;
+}
+.float_right {
+	float: right;
+}
+.clear_both {
+	clear: both;
+}
+.open_new_window {
+	background: url('/images/new_window_icon.gif') no-repeat scroll right center transparent;
+	padding: 0px 17px 0px 0px;
+}
+
+
+
+
+#operation_selection_list li.selectable_trial {
+	cursor: pointer;
+}
+#operation_selection_list li.selectable_trial:hover {
+	text-decoration: underline;
+}
+div.ui-input-text {
+	width: 100px !important;
+}
