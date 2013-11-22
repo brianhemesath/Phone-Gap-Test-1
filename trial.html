@@ -1,0 +1,151 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link href="css/site.css" rel="stylesheet" type="text/css" />
+<link href="//code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="/sfdc/css/flat-green.css" />
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="author" content="">
+<meta name="robots" content="noodp">
+<title>SF-TDE</title>
+
+</head>
+<body>
+
+
+<div data-role="page" id="launcher" data-url="launcher" data-title="Launcher">
+<a data-role="button" href="#home" data-transition="slide">Launch</a>
+</div>
+
+<div data-role="page" id="home" data-url="home" data-title="Home" data-theme="a">
+	<div data-role="header" data-position="fixed">
+		<div class="float_left" style="width: 25px; padding-right: 25px;"><a href="#home" data-role="button" data-icon="home" data-iconpos="notext">home</a></div>
+		<div class="float_left"><h2 class="page_header">Home</h2></div>
+		<div class="float_right" style="width: 90px;"><a data-role="button" data-mini="true" data-icon="delete" class="sfdc_logout">log out</a><a rel="external" data-role="button" class="sfdc_login" href="https://login.salesforce.com/services/oauth2/authorize?response_type=token&client_id=3MVG9zJJ_hX_0bb9pLMlgobAtxv0K6XWYwMad5RTKMpLKK8UaiLviJsjgwjhkD13Ht5rWGUAlXFdS8vnHzlX_&redirect_uri=https%3A%2F%2Fwww.volunteerlocal.com%2Fsfdc%2F&state=login&display=touch&prompt=login">log in</a></div>
+		<div class="clear_both"></div>
+	</div>
+	<div data-role="content">
+
+		<a data-role="button" href="#operation_selection" data-transition="slide">operation selection</a>
+
+	</div>
+<br /><br />(if you can't log in, <a href="#operation_selection" data-transition="slide">click here</a> to continue)
+	<div data-role="footer" data-id="footer1" data-position="fixed">
+		&copy;  2013
+	</div>
+</div>
+
+
+
+<div data-role="page" id="operation_selection" data-url="operation_selection" data-title="Operation Selection" data-theme="a">
+	<div data-role="header" data-position="fixed">
+		<div class="float_left" style="width: 25px; padding-right: 25px;"><a href="#home" data-role="button" data-icon="home" data-iconpos="notext">home</a></div>
+		<div class="float_left"><h2 class="page_header">Operation Selection</h2></div>
+		<div class="float_right" style="width: 90px;"><a data-role="button" data-mini="true" data-icon="delete" class="sfdc_logout">log out</a><a rel="external" data-role="button" class="sfdc_login" href="https://login.salesforce.com/services/oauth2/authorize?response_type=token&client_id=3MVG9zJJ_hX_0bb9pLMlgobAtxv0K6XWYwMad5RTKMpLKK8UaiLviJsjgwjhkD13Ht5rWGUAlXFdS8vnHzlX_&redirect_uri=https%3A%2F%2Fwww.volunteerlocal.com%2Fsfdc%2F&state=login&display=touch&prompt=login">log in</a></div>
+		<div class="clear_both"></div>
+	</div>
+	<div data-role="content">
+		Search for an Operation and associated trials:
+		<br />
+		<br />
+		<ul id="operation_selection_list" data-role="listview" data-filter-reveal="true" data-inset="true" data-filter="true">
+			<li data-role="list-divider">Oscar's Operation</li>
+			<li id="Trial #1" class="selectable_trial">Trial #1</li>
+			<li data-role="list-divider">Marcel's Operation</li>
+			<li id="Trial Corn 42" class="selectable_trial"">Trial Corn 42</li>
+			<li id="Some name, yeah" class="selectable_trial"">Some name, yeah</li>
+			<li data-role="list-divider">Sandy's Operation</li>
+			<li id="Grow beans" class="selectable_trial">Grow beans</li>
+			<li id="Maybe corn" class="selectable_trial">Maybe corn</li>
+			<li id="Anything, really" class="selectable_trial">Anything, really</li>
+			<li data-role="list-divider">Eder's Operation</li>
+			<li id="Just a test trial" class="selectable_trial">Just a test trial</li>
+			<li data-role="list-divider">Brian's Operation</li>
+			<li id="Trial Trial" class="selectable_trial">Trial Trial</li>
+		</ul>
+	</div>
+	<div data-role="footer" data-id="footer1" data-position="fixed">
+		&copy;  2013
+	</div>
+</div>
+
+
+
+<div data-role="page" id="field_entry" data-url="field_entry" data-title="Field Entry" data-theme="a">
+	<div data-role="header" data-position="fixed">
+		<div class="float_left" style="width: 25px; padding-right: 25px;"><a href="#home" data-role="button" data-icon="home" data-iconpos="notext">home</a></div>
+		<div class="float_left"><h2 class="page_header">Trial Entry for <span id="field_entry_header_name"></span></h2></div>
+		<div class="float_right" style="width: 90px;"><a data-role="button" data-mini="true" data-icon="delete" class="sfdc_logout">log out</a><a rel="external" data-role="button" class="sfdc_login" href="https://login.salesforce.com/services/oauth2/authorize?response_type=token&client_id=3MVG9zJJ_hX_0bb9pLMlgobAtxv0K6XWYwMad5RTKMpLKK8UaiLviJsjgwjhkD13Ht5rWGUAlXFdS8vnHzlX_&redirect_uri=https%3A%2F%2Fwww.volunteerlocal.com%2Fsfdc%2F&state=login&display=touch&prompt=login">log in</a></div>
+		<div class="clear_both"></div>
+	</div>
+	<div data-role="content">
+		<h1>Strip 1 (product A / factor A)</h1>
+		<div class="ui-grid-a">
+			<div class="ui-block-a">Measurement #1 <input type="text" /></div>
+			<div class="ui-block-b">Measurement #2 <input type="text" /></div>
+		</div>
+
+		<div class="ui-grid-a">
+			<div class="ui-block-a">Measurement #3 <input type="text" /></div>
+			<div class="ui-block-b">Measurement #4 <input type="text" /></div>
+		</div>
+		<hr />
+		<h1>Strip 2 (product A / factor B)</h1>
+		<div class="ui-grid-a">
+			<div class="ui-block-a">Measurement #1 <input type="text" /></div>
+			<div class="ui-block-b">Measurement #2 <input type="text" /></div>
+		</div>
+
+		<div class="ui-grid-a">
+			<div class="ui-block-a">Measurement #3 <input type="text" /></div>
+			<div class="ui-block-b">Measurement #4 <input type="text" /></div>
+		</div>
+		<hr />
+
+		<h1>Strip 3 (product B / factor A)</h1>
+		<div class="ui-grid-a">
+			<div class="ui-block-a">Measurement #1 <input type="text" /></div>
+			<div class="ui-block-b">Measurement #2 <input type="text" /></div>
+		</div>
+
+		<div class="ui-grid-a">
+			<div class="ui-block-a">Measurement #3 <input type="text" /></div>
+			<div class="ui-block-b">Measurement #4 <input type="text" /></div>
+		</div>
+		<hr />
+
+		<h1>Strip 4 (product B / factor B)</h1>
+		<div class="ui-grid-a">
+			<div class="ui-block-a">Measurement #1 <input type="text" /></div>
+			<div class="ui-block-b">Measurement #2 <input type="text" /></div>
+		</div>
+
+		<div class="ui-grid-a">
+			<div class="ui-block-a">Measurement #3 <input type="text" /></div>
+			<div class="ui-block-b">Measurement #4 <input type="text" /></div>
+		</div>
+		<hr />
+
+		<input type="submit" value="Save Measurements" />
+
+	</div>
+	<div data-role="footer" data-id="footer1" data-position="fixed">
+		&copy;  2013
+	</div>
+</div>
+
+
+<script src="//code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="js/functions.js" type="text/javascript"></script>
+<script src="js/doc_ready.js" type="text/javascript"></script>
+<script src="//code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+
+</body>
+</html>
